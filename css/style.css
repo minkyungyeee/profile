@@ -1,1 +1,8 @@
 @charset "UTF-8";
+/* 바로가기 */
+#skip {z-index:2;position:fixed;top:0;left:0;}
+#skip li {}
+#skip li a {display:block;line-height:0;font-size:0;color:#fff;background:#000;text-align:center;}
+#skip li a:focus {font-size:14px;line-height:45px;}
+
+#wrap {z-index:1;position:relative;}
