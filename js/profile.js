@@ -16,13 +16,9 @@
 
             $me.on({
                 mousemove:function(e){
-                    transX = e.clientX*.04;
-                    transY = e.clientY*.04;
-                    console.log(transX,transY)
+                    transX = e.clientX*.02;
+                    transY = e.clientY*.04-20;
                     $(this).css({transform:'translate('+transX+'px,'+transY+'px) rotate('+transX+'deg)'});
-                },
-                mouseleave:function(){
-                    $(this).css({transform:'translate(0,0) rotate(0)'});
                 }
             });
         }

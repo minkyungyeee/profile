@@ -19,10 +19,10 @@
 #wrap #main #section1 .gap .container .txt-area {z-index:1;position:relative;width:100%;height:100%;}
 #wrap #main #section1 .gap .container .txt-area .tit-txt {}
 #wrap #main #section1 .gap .container .txt-area .tit-txt.top-tit {position:relative;top:0;left:0;}
-#wrap #main #section1 .gap .container .txt-area .tit-txt.side-tit {position:absolute;bottom:0;left:0;transform: rotate(270deg);margin-bottom:270px;margin-left:-200px;} /* 마우스휠로 위로땡기기 */
+#wrap #main #section1 .gap .container .txt-area .tit-txt.side-tit {position:absolute;bottom:0;left:0;transform: rotate(270deg);margin-bottom:200px;margin-left:-200px;} /* 마우스휠로 위로땡기기 */
 #wrap #main #section1 .gap .container .txt-area .tit-txt.mid-tit {position:absolute;top:10%;left:15%;}
 
-#wrap #main #section1 .gap .container .txt-area .tit-txt > span {font-size:80px;font-weight:600;}
+#wrap #main #section1 .gap .container .txt-area .tit-txt > span {font-size:80px;font-weight:600;letter-spacing:-1px;}
 
 /* footer */
 #wrap #footer {z-index:1;position:relative;}
