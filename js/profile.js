@@ -2,8 +2,39 @@
     var profile = {
         init:function(){
             var that = this;
+                that.scrlMenuFn();
                 that.headerFn();
                 that.section1Fn();
+        },
+        scrlMenuFn:function(){
+            var scrlPrev = 0;
+            var scrlNew = 0;
+            var result = null;
+            var that = this;
+
+            function wheelPositionFn(){
+                result = scrlPrev - scrlNew > 0 ? 'u':'d'
+                return {
+                    result,scrlPrev,scrlNew
+                }
+            }
+
+            $(window).scroll(function(){
+                scrlNew = $(this).scrollTop();
+                wheelPositionFn();
+
+                if(scrlNew <= 10){
+                    $('#header').removeClass('addHide');
+                } else {
+                    if(result === 'u'){
+                        $('#header').removeClass('addHide');
+                    }
+                    if(result === 'd'){
+                        $('#header').addClass('addHide');
+                    }
+                }
+                scrlPrev = scrlNew;
+            });
         },
         headerFn:function(){
 
