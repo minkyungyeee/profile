@@ -7,51 +7,56 @@
                 that.section1Fn();
         },
         scrlMenuFn:function(){
-            var scrlPrev = 0;
-            var scrlNew = 0;
-            var result = null;
-            var that = this;
 
-            function wheelPositionFn(){
-                result = scrlPrev - scrlNew > 0 ? 'u':'d'
-                return {
-                    result,scrlPrev,scrlNew
-                }
-            }
-
-            $(window).scroll(function(){
-                scrlNew = $(this).scrollTop();
-                wheelPositionFn();
-
-                if(scrlNew <= 10){
-                    $('#header').removeClass('addHide');
-                } else {
-                    if(result === 'u'){
-                        $('#header').removeClass('addHide');
-                    }
-                    if(result === 'd'){
-                        $('#header').addClass('addHide');
-                    }
-                }
-                scrlPrev = scrlNew;
-            });
         },
         headerFn:function(){
 
         },
         section1Fn:function(){
-            var $me = $('#section1 .intro-btn');
-            var transX = 0;
-            var transY = 0;
-            var transZ = 0;
+            var winW = $(window).innerWidth();
+            var winH = $(window).innerHeight();
+            var $sec1 = $('#section1');
 
-            $me.on({
-                mousemove:function(e){
-                    transX = e.clientX*.02;
-                    transY = e.clientY*.04-20;
-                    $(this).css({transform:'translate('+transX+'px,'+transY+'px) rotate('+transX+'deg)'});
-                }
+            var $txt = $('#section1 .txt');
+            var n = $('#section1 .txt').length;
+            var cnt = 0;
+            var next = [];
+            var setId = null;
+
+            function resizeFn(){
+                winW = $(window).innerWidth();
+                winH = $(window).innerHeight();
+                $sec1.css({width:winW,height:winH});
+            }
+            setTimeout(resizeFn,10);
+            $(window).resize(function(){
+                setTimeout(resizeFn,10);
             });
+
+            function txtNextSlideFn(){
+                next=[3,0,1,2];
+                for(var i=0;i<cnt;i++){
+                    var imsi = next.shift();
+                        next.push(imsi);
+                }
+
+                for(var i=0;i<n;i++){
+                    $txt.eq(next[i]).stop().animate({left:(33*i)+'%'},0).animate({left:(33*(i-1))+'%'},3000,'linear');
+                }
+            }
+
+            function nextSlideCountFn(){
+                cnt ++;
+                if(cnt>n-1){cnt=0}
+                txtNextSlideFn();
+            }
+
+            setTimeout(nextSlideCountFn,10);
+
+            function autoPlay(){
+                setId = setInterval(nextSlideCountFn,3000);
+            }
+            autoPlay();
         }
     }
     profile.init();

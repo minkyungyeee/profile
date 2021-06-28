@@ -35,13 +35,19 @@
 <div id="wrap">
     <header id="header">
         <div class="gap">
-            <div class="container">
-                <nav id="nav">
-                    <ul>
-                        <li><a href="#section2" class="main-btn" title="main-introduce">ABOUT ME</a></li> <!-- 스킬소개섹션 -->
-                        <li><a href="#section2" class="main-btn" title="main-portfolio">WORKS</a></li> <!-- 포트폴리오 -->
-                        <li><a href="#section2" class="main-btn" title="main-animation">SKILL</a></li> <!-- 애니메이션같은거삽입 -->
-                    </ul>
+            <div class="container clearfix">
+                <aside id="aside">
+                    <div class="wrap">
+                        <div class="gap">
+                            <div class="container">
+                                <i class="bar bar1"></i>
+                                <i class="bar bar2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <nav id="nav"><!-- 햄버거메뉴클릭하면 풀페이지로 -->
+        
                 </nav>
             </div>
         </div>
@@ -50,21 +56,37 @@
         <section id="section1">
             <div class="gap">
                 <div class="container">
-                    <a href="javascript:" class="intro-btn" title="intro"><img src="./img/me.png" alt="my-pictures"></a>
-                    <div class="txt-area">
-                        <div class="top-tit tit-txt">
-                            <span>MINKYUNG</span>
+                    <div class="top-box">
+                        <div class="box-gap">
+                            <div class="box-wrap clearfix">
+                                <h2>WEB PUBLISHER</h2>
+                                <div class="img-box"></div><!-- 추후 이미지 추가하면서 코딩하기 -->
+                            </div>
                         </div>
-                        <div class="side-tit tit-txt">
-                            <span>PORTFOLIO</span>
+                    </div>
+                    <div class="center-box">
+                        <div class="box-gap">
+                            <div class="box-wrap clearfix">
+                                <div class="img-box"></div><!-- 추후 이미지 추가하면서 코딩하기 -->
+                                <h2>MINKYUNG</h2>
+                            </div>
                         </div>
-                        <div class="mid-tit tit-txt">
-                            <span>WEB PUBLISHER</span>
+                    </div>
+                    <div class="bottom-box">
+                        <div class="box-gap">
+                            <div class="box-wrap">
+                                <ul class="clearfix">
+                                    <li class="txt txt0">PORTFOLIO</li>
+                                    <li class="txt txt1">PORTFOLIO</li>
+                                    <li class="txt txt2">PORTFOLIO</li>
+                                    <li class="txt txt3">PORTFOLIO</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="con-text">
-                            <h3 class="kr">안녕하세요. 신입 웹퍼블리셔 강민경입니다.</h3>
-                            <span>#POSITIVE</span><span>#FRIENDLY</span><span>#SOCIABLE</span><span>#CAPABLE</span>
-                        </div>
+                    </div>
+                    <div class="scrl-box">
+                        <h4 class="scrl-txt">SCROLL</h4>
+                        <span class="scrl"></span>
                     </div>
                 </div>
             </div>
@@ -72,12 +94,32 @@
         <section id="section2">
             <div class="gap">
                 <div class="container">
-                    <!-- <h1>MY SKILLS</h1> -->
+                    <div class="intro-img">
+                        <a href="#" class="me" title="me"><img src="./img/me.png" alt="minkyung"></a>
+                    </div>
+                    <div class="intro-con">
+                        <h3 class="kr">안녕하세요. 신입 웹퍼블리셔 강민경입니다.</h3>
+                        <p class="kr">눈에 보이는 결과물을 만들어내는 일을 좋아합니다. 일정한 규칙이 있고, 그 안에서 코딩 하는대로 구조가 짜여지는 웹에 매력을 느꼈습니다. 기초부터 차근차근 공부하며 웹표준, 크로스브라우징, 반응형웹등 다양한 것들을 익혔습니다. </p>
+                        <p class="kr">여러 팀원들과 원활히 소통하며 최고의 웹서비스를 제공하는데 기여할 수 있는 웹 퍼블리셔가 되겠습니다.</p>
+                        <span>#POSITIVE</span><span>#FRIENDLY</span><span>#COMMUNICATION SKILLS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="gap">
+                <div class="container">
+                    <div class="skill-tit">
+                        <h2>MY SKILLS</h2>
+                    </div>
+                    <div class="skill-con"></div><!-- svg애니메이션 -->
                 </div>
             </div>
         </section>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+
+    </footer>
 </div>
 
 <script src="./js/profile.js"></script>

@@ -10,7 +10,7 @@ html,body {width:100%;height:100%;}
 
 html {overflow-y:scroll;}
 html.prevenScrl {overflow:hidden;}
-body {font:normal 14px/1 'Montserrat', 'Roboto', 'Raleway';color:#fff;background:#111;} 
+body {font:normal 14px/1 'Montserrat', 'Roboto', 'Raleway';color:#fffcf7;background:#111;} 
 h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:14px;}
 em,i,address {font-style:normal;}
 ul,li {list-style:none;}
