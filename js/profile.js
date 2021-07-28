@@ -101,7 +101,9 @@
                 winW = $(window).innerWidth();
                 winH = $(window).innerHeight();
 
-                $navi.css({width:winW,height:winH});
+                if($navi.hasClass('addActive')){
+                    $navi.css({width:winW,height:winH});
+                }
             }
 
             setTimeout(resizeFn,10);
@@ -141,6 +143,7 @@
         section1Fn:function(){
             var winW = $(window).innerWidth();
             var winH = $(window).innerHeight();
+            var secH = winH;
             var $sec1 = $('#section1');
             var h2 = $('#section1 .box-wrap h2');
 
@@ -150,10 +153,26 @@
             var next = [];
             var setId = null;
 
+            var rate = 33;
+
             function resizeFn(){
                 winW = $(window).innerWidth();
                 winH = $(window).innerHeight();
-                $sec1.css({width:winW,height:winH});
+                if(winW>1780){
+                    rate = 33
+                } else{
+                    rate = 42
+                }
+
+                if(winH>900){
+                    secH = winH
+                } else if(winH>660){
+                    secH = 900;
+                } else {
+                    secH = $('#section1').innerHeight();
+                }
+                $sec1.css({width:winW,height:secH});
+
             }
             setTimeout(resizeFn,10);
             $(window).resize(function(){
@@ -163,6 +182,8 @@
             $(document).ready(function(){
                 h2.addClass('addLoad');
             });
+
+
             //portfolio 글씨 롤링
             function txtNextSlideFn(){
                 next=[3,0,1,2];
@@ -172,7 +193,7 @@
                 }
 
                 for(var i=0;i<n;i++){
-                    $txt.eq(next[i]).stop().animate({left:(33*i)+'%'},0).animate({left:(33*(i-1))+'%'},3000,'linear');
+                    $txt.eq(next[i]).stop().animate({left:(rate*i)+'%'},0).animate({left:(rate*(i-1))+'%'},3000,'linear');
                 }
             }
 
