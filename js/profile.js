@@ -45,49 +45,54 @@
             })
         },
         scrlSectionFn:function(){
+            var winW = $(window).innerWidth();
+            var winH = $(window).innerHeight();
             var $sec1 = $('#section1');
             var $sec2 = $('#section2');
             var wheelDelta = 0;
+            var wheel = true;
 
-            // section2로 이동
-            $sec1.on({
-                mousewheel:function(e){
-                    e.preventDefault();
-                    if(e.originalEvent.wheelDelta){
-                        wheelDelta = e.originalEvent.wheelDelta;
-                    } else {
-                        wheelDelta = e.detail*-1;
-                    }
-                    
-                    if(!$('html,body').is(':animated')){
-                        if(wheelDelta<0){
-                            $('html,body').stop().animate({scrollTop:$sec2.offset().top},600,'easeInSine');
-                        } else {
-                            $('html,body').stop().animate({scrollTop:$(this).offset().top},0);
-                            //section1과 2사이에화면이잇는데 마우슨 ㄴsection1에 잇으면 이상하게올라감
-                        }
-                    }
+            function resizeFn(){
+                winW = $(window).innerWidth();
+                winH = $(window).innerHeight();
+                if(winH>900){
+                    wheel = true;
+                    mouseWheelFn();
                 }
+                if(winH<=900 || winW<=1024){
+                    wheel = false;
+                    mouseWheelFn();
+                }
+            }
+
+            setTimeout(resizeFn,10);
+
+            $(window).resize(function(){
+                setTimeout(resizeFn,10);
             });
 
-            // $sec2.on({
-            //     mousewheel:function(e){
-            //         e.preventDefault();
-            //         if(e.originalEvent.wheelDelta){
-            //             wheelDelta = e.originalEvent.wheelDelta;
-            //         } else {
-            //             wheelDelta = e.detail*-1;
-            //         }
-                    
-            //         if(!$('html,body').is(':animated')){
-            //             if(wheelDelta>=0){
-            //                 $('html,body').stop().animate({scrollTop:$sec1.offset().top},600,'easeInSine');
-            //             } else {
-                            
-            //             }
-            //         }
-            //     }
-            // });
+            function mouseWheelFn(){
+                if(wheel === true){
+                    $sec1.on('mousewheel DOMMouseScroll',function(e){
+                        e.preventDefault();
+                        if(e.originalEvent.wheelDelta){
+                            wheelDelta = e.originalEvent.wheelDelta;
+                        } else {
+                            wheelDelta = e.detail*-1;
+                        }
+
+                        if(!$('html,body').is(':animated')){
+                            if(wheelDelta < 0){
+                                $('html,body').stop().animate({scrollTop:$sec2.offset().top},600,'easeInSine');
+                            } else {
+                                $('html,body').stop().animate({scrollTop:$(this).offset().top},0);
+                            }
+                        }
+                    });
+                } else {
+                    $sec1.off('mousewheel DOMMouseScroll');
+                }
+            }
         },
         headerFn:function(){
             var winW = $(window).innerWidth();
@@ -101,9 +106,12 @@
                 winW = $(window).innerWidth();
                 winH = $(window).innerHeight();
 
-                if($navi.hasClass('addActive')){
-                    $navi.css({width:winW,height:winH});
-                }
+                $navi.css({width:winW,height:winH});
+                // if($navi.hasClass('addActive')){
+                //     $navi.css({width:winW,height:winH});
+                // } else {
+                //     $navi.css({width:0})
+                // }
             }
 
             setTimeout(resizeFn,10);
@@ -143,8 +151,6 @@
         section1Fn:function(){
             var winW = $(window).innerWidth();
             var winH = $(window).innerHeight();
-            var secH = winH;
-            var $sec1 = $('#section1');
             var h2 = $('#section1 .box-wrap h2');
 
             var $txt = $('#section1 .txt');
@@ -163,16 +169,6 @@
                 } else{
                     rate = 42
                 }
-
-                if(winH>900){
-                    secH = winH
-                } else if(winH>660){
-                    secH = 900;
-                } else {
-                    secH = $('#section1').innerHeight();
-                }
-                $sec1.css({width:winW,height:secH});
-
             }
             setTimeout(resizeFn,10);
             $(window).resize(function(){
@@ -213,7 +209,6 @@
         section2Fn:function(){
             var $me = $('#section2 .me');
             var $svg = $('#section2 .svg1 path');
-            var objTot = [];
 
             var $introImg = $('#section2 .intro-img');
             var sclT = $(window).scrollTop();
@@ -233,23 +228,13 @@
                 //console.log(sclT)
                 $introImg.css({transform:'translateY('+sclT+'px)'})
             });
-            // function svgAnimationFn(){
-            //     $.each($svg,function(idx,obj){
-            //         objTot[idx] = Math.ceil(obj.getTotalLength());
-            //         console.log(objTot)
-            //         obj.style.strokeDasharray = objTot[idx];
-            //         obj.style.strokeDashoffset = objTot[idx];
-                    
-            //         $(obj).stop().animate({strokeDashoffset:0},2000)
-            //     });
-            // }
         },
         section3Fn:function(){
             var cir = $('.cir');
             var num = $('.num');
             var totalL = [];
             var perLen = [];
-            var percent = [.90, .90, .70, .75, .60, .60];
+            var percent = [.90, .90, .75, .65, .75, .60];
             var seconds = 4;
             var piece = [];
             var cnt = [0,0,0,0,0,0];
