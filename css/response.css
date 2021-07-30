@@ -131,10 +131,16 @@
     #wrap #main #section5 .gap .container .content-box .right .info-box .info-gap ul.info-con li span.list-name {display:inline-block;width:200px;}
     #wrap #main #section5 .gap .container .content-box .right .info-box .info-gap ul.info-con li span.list-name i {font-size:24px;padding-right:15px;}
     #wrap #main #section5 .gap .container .content-box .right .info-box .info-gap ul.info-con li.list0 span a {font-size:20px;}
+
+
+    #goTop {bottom:150px;}
 }
 
 
 @media all and (max-width:830px){
+    /* load */
+    #loadPage .load-txt {width:500px;height:250px;}
+
     /* section2 */
     #wrap #main #section2 .gap .container .intro .intro-tit > h2 {font-size:40px;}
     #wrap #main #section2 .gap .container .intro .intro-tit > p {font-size:50px;}
@@ -181,6 +187,9 @@
 }
 
 @media all and (max-width:660px){
+    /* load */
+    #loadPage .load-txt {width:75.75757576vw;height:250px;}
+
     /* section1 */
     #wrap #main #section1 .gap .container .bottom-box .box-gap .box-wrap ul li {width:220px;}
     #wrap #main #section1 .gap .container .scrl-box {display:none;}

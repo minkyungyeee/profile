@@ -7,6 +7,19 @@
 #wrap {position:relative;overflow: hidden;}
 .gap {max-width:1720px;width:100%;height:100%;margin:0 auto;}
 
+/* loading */
+#loadPage {z-index:6;position:fixed;top:0;left:0;width:100%;height:100vh;overflow: hidden;background:#000;}
+#loadPage .load-txt {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:300px;}
+#loadPage .load-txt #loadTxt {width:100%;height:100%;}
+.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{fill:none;stroke-miterlimit:10;stroke-width:2px;}
+.cls-1{stroke:#f39322;}
+.cls-2{stroke:#fecb37;}
+.cls-3{stroke:#fed58b;}
+.cls-4{stroke:#ffe8c0;}
+.cls-5{stroke:#fed58c;}
+.cls-6{stroke:#fecb38;}
+.cls-7{stroke:#f39323;}
+
 /* header */
 #wrap #header {z-index:3;position:fixed;top:0;left:0;width:100%;height:80px;transition:all .4s;}
 #wrap #header.addHide {top:-90px;}
@@ -111,27 +124,6 @@
 #wrap #main #section3 .gap .container .skill-tit > h2 {display:inline-block;font-size:100px;font-weight:600;letter-spacing:-2px;}
 #wrap #main #section3 .gap .container .skill-tit > h2 > span {display:inline-block;margin:-15px 30px 0 0;-webkit-text-stroke:.5px #fffcf7;-webkit-text-fill-color: transparent;}
 
-/* #wrap #main #section3 .gap .container .skill-con {padding-top:100px;}
-#wrap #main #section3 .gap .container .skill-con .col {width:100%;}
-#wrap #main #section3 .gap .container .skill-con .col2 {text-align:right;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap {position:relative;display:inline-block;width:500px;height:500px;margin:0 auto;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg {z-index:1;position:relative;width:100%;height:100%;transform:rotate(-90deg)}
-
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg .st0 {fill:none;stroke:#CCCCCC;stroke-width:3;stroke-miterlimit:10;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg .st1 {fill:none;stroke:#E6E6E6;stroke-width:2;stroke-miterlimit:10;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg .cir {fill:none;stroke:#FFF6B6;stroke-width:8;stroke-miterlimit:10;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg .cir.cir0 {stroke:#fff6b6;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg .cir.cir1 {stroke:#FFCE00;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg .cir.cir2 {stroke:#ffb400;} 
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg .cir.cir3 {stroke:#ffb400;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg .cir.cir4 {stroke:#FFCE00;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap svg .cir.cir5 {stroke:#fff6b6;}
-
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap .inside {z-index:2;position:absolute;top:50%;left:0;margin-top:-80px;width:100%;text-align:center;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap .inside span {display:block;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap .inside .tit {font-size:40px;margin-bottom:20px;}
-#wrap #main #section3 .gap .container .skill-con .col .svgWrap .inside .num {font-size:60px;font-weight:700;} */
-
 #wrap #main #section3 .gap .container .skill-con {padding-top:100px;display:flex;flex-wrap: wrap;justify-content: space-between;}
 #wrap #main #section3 .gap .container .skill-con .svgWrap {position:relative;width:500px;height:500px;}
 #wrap #main #section3 .gap .container .skill-con .svgWrap svg {z-index:1;position:relative;width:100%;height:100%;transform:rotate(-90deg)}
@@ -227,3 +219,10 @@
 #wrap #footer .gap .container .site-box .site-btn-wrap {}
 #wrap #footer .gap .container .site-box .site-btn-wrap .site-btn {display:block;width:100%;line-height:50px;font-size:15px;font-weight:500;letter-spacing:3px;text-align:center;border:1px solid rgba(255,255,255,.6);transition:all .4s;}
 #wrap #footer .gap .container .site-box .site-btn-wrap .site-btn:hover {border-color: #ffb400;}
+
+/* GO TOP */
+#goTop {display:none;z-index:4;position:fixed;bottom:20px;right:20px;}
+#goTop.addTop {display:block;}
+#goTop .go-top-btn {display:block;width:40px;height:40px;border-radius:50%;border:2px solid transparent;text-align:center;line-height:37px;background:#ffb400;opacity:.8;transition:all .4s;}
+#goTop .go-top-btn:hover {background:transparent;border:2px solid #ffb400;color:#ffb400;}
+#goTop .go-top-btn span {font-size:14px;font-weight:500;}

@@ -2,6 +2,7 @@
     var profile = {
         init:function(){
             var that = this;
+                that.loadFn();
                 that.scrlMenuFn();
                 that.scrlSectionFn();
                 that.headerFn();
@@ -11,6 +12,37 @@
                 that.section4Fn();
                 that.section5Fn();
                 that.footerFn();
+                that.goTopFn();
+        },
+        loadFn:function(){
+            var $load = $('#loadPage');
+            var $svg = $('#loadTxt path');
+            var objTot = [];
+
+            $(document).ready(function(){
+                $('html').addClass('prevenScrl');
+                $load.stop().fadeIn(300);
+                txtAnimationFn();
+
+                setTimeout(function(){
+                    $load.stop().fadeOut(500);
+                },3000);
+
+                setTimeout(function(){
+                    $('html').removeClass('prevenScrl');
+                },3010);
+            });
+
+            function txtAnimationFn(){
+                $.each($svg,function(idx,obj){
+                    objTot[idx] = Math.ceil(obj.getTotalLength());
+
+                    obj.style.strokeDasharray = objTot[idx];
+                    obj.style.strokeDashoffset = objTot[idx];
+
+                    $(obj).stop().animate({strokeDashoffset:0},3000);
+                });
+            }
         },
         scrlMenuFn:function(){
             var scrlPrev = 0;
@@ -31,13 +63,15 @@
                 wheelPositionFn();
 
                 if(scrlNew<=10){
-                    $('#header').removeClass('addHide')
+                    $('#header').removeClass('addHide');
+                    $('#goTop').removeClass('addTop');
                 } else {
                     if(result === 'u'){
                         $('#header').removeClass('addHide');
                     }
                     if(result === 'd'){
                         $('#header').addClass('addHide');
+                        $('#goTop').addClass('addTop');
                     }
                 }
 
@@ -341,8 +375,6 @@
             var mouseY = 0;
             var cirX = 0;
             var cirY = 0;
-            var x = 0;
-            var y = 0;
             var s = .06;
 
             function animate(){
@@ -373,6 +405,16 @@
                 click:function(){
                     //$('.site-box').toggleClass('addOpen')
                     $('.site-wrap').stop().slideToggle();
+                }
+            });
+        },
+        goTopFn:function(){
+            var $topBtn = $('#goTop .go-top-btn');
+
+            $topBtn.on({
+                click:function(e){
+                    e.preventDefault();
+                    $('html,body').stop().animate({scrollTop:0},1000,'easeInOutExpo');
                 }
             });
         }
