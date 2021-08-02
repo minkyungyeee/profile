@@ -12,9 +12,12 @@ html {overflow-y:scroll;}
 html.prevenScrl {overflow:hidden;}
 html::-webkit-scrollbar {width:3px;}
 html::-webkit-scrollbar-track {background:#111;}
+html.white::-webkit-scrollbar-track {background:#fff;}
 html::-webkit-scrollbar-button {background:#111;height:50px;}
+html.white::-webkit-scrollbar-button {background:#fff;height:50px;}
 html::-webkit-scrollbar-thumb {background:#ffb400;opacity:.4;}
 body {font:normal 14px/1 'Montserrat', 'Roboto', 'Raleway';color:#fffcf7;background:#111;} 
+body.white {color:#111;background:#fff;} 
 h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:14px;}
 em,i,address {font-style:normal;}
 ul,li {list-style:none;}
@@ -29,4 +32,5 @@ button {all:unset;outline:0;appearance:none;background:none;border-radius:0;}
 .blind {display:block;text-indent:-999999px;overflow:hidden;}
 .hide {display:none;}
 .kr {font:normal 14px/1 'Noto Sans KR', 'Nanum Gothic';color:#fff;}
+.wh-kr {font:normal 14px/1 'Noto Sans KR', 'Nanum Gothic';color:#111;}
 
