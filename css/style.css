@@ -1,4 +1,6 @@
 @charset "UTF-8";
+.gap {max-width:1720px;width:100%;height:100%;margin:0 auto;}
+
 /* loading */
 #loadPage {z-index:6;position:fixed;top:0;left:0;width:100%;height:100vh;overflow: hidden;background:#000;}
 #loadPage .load-txt {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:300px;}
@@ -14,7 +16,6 @@
 
 
 /* main */
-#wrap #main {z-index:1;position:relative;}
 /* section1 */
 #wrap #main #section1 {position:relative;}
 #wrap #main #section1 .gap .container {padding-top:80px;}
@@ -124,10 +125,10 @@
 
 #wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide .slide-cont {z-index:1;position:relative;width:100%;height:100%;background:url(../img/port_0.png) no-repeat 50% 50%;background-size:cover;transform:scale(1);overflow:hidden;transition:all .4s;}
 #wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide.addHover .slide-cont {transform:scale(1.1);}
-#wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide0 .slide-cont {background-image:url(../img/port_0.png);}
-#wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide1 .slide-cont {background-image:url(../img/port_1.png);}
-#wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide2 .slide-cont {background-image:url(../img/port_2.png);}
-#wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide3 .slide-cont {background-image:url(../img/port_3.png);}
+#wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide0 .slide-cont {background-image:url(../img/port_0.jpg);}
+#wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide1 .slide-cont {background-image:url(../img/port_1.jpg);}
+#wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide2 .slide-cont {background-image:url(../img/port_2.jpg);}
+#wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide3 .slide-cont {background-image:url(../img/port_3.jpg);}
 #wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide .slide-cont::after {z-index:2;position:absolute;content:'';display:block;width:100%;height:100%;background:#000;opacity:0;transition:all .4s;}
 #wrap #main #section4 .gap .container .work-con .slide-container .slide-view .slide-wrap .slide.addHover .slide-cont::after {opacity:.6;}
 

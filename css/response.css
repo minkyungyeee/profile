@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 @media all and (max-width:1780px){
+    .gap {max-width:100%;padding:0 5%;box-sizing: border-box;}
+    
     /* section1 */
     #wrap #main #section1 .gap .container > div.top-box > .box-gap .box-wrap .img-box {width:45%;}
     #wrap #main #section1 .gap .container > div.center-box > .box-gap .box-wrap .img-box {width:50%;}
