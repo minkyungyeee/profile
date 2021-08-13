@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="white">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹퍼블리셔 강민경 > WORK2</title>
+    <title>웹퍼블리셔 강민경 > GENESIS SITE 구현하기</title>
 
     <!-- css -->
     <link rel="stylesheet" href="./../../css/reset.css">
@@ -27,14 +27,166 @@
     <link rel=" shortcut icon" href="./../../favi_icon.ico">
     <link rel="icon" href="./../../favi_icon.ico">
 </head>
-<body>
+<body class="white">
 <ul id="skip">
     <li><a href="#header">메뉴바로가기</a></li>
     <li><a href="#section1">section1바로가기</a></li>
     <li><a href="#section2">section2바로가기</a></li>
     <li><a href="#section3">section3바로가기</a></li>
 </ul>
-
+<div id="wrap">
+    <!-- header start -->
+    <header id="header" class="white">
+        <div class="gap">
+            <div class="container clearfix">
+                <aside id="aside">
+                    <div class="aside-gap">
+                        <div class="ham-menu">
+                            <a href="javascript:" class="aside-btn" title="aside-btn">
+                                <i class="bar bar1"></i>
+                                <i class="bar bar2"></i>
+                            </a>
+                            <nav id="navi"><!-- 햄버거메뉴클릭하면 풀페이지로 -->
+                                <ul class="navi-con">
+                                    <li><a href="#section2" class="menu menu0" title="menu-link">ABOUT ME</a></li>
+                                    <li><a href="#section3" class="menu menu1" title="menu-link">SKILLS</a></li>
+                                    <li><a href="#section4" class="menu menu2" title="menu-link">WORKS</a></li>
+                                    <li><a href="#section5" class="menu menu3" title="menu-link">CONTACT</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- main start -->
+    <main id="main">
+        <!-- section1 start -->
+        <section id="section1">
+            <div class="gap">
+                <div class="container">
+                    <div class="main-tit">
+                        <h2>03</h2>
+                        <span>GENESIS SITE 구현하기</span>
+                        <a href="http://minkfree94.dothome.co.kr/portfolio_0/" target="blank" class="site-link" title="site-link0"><span>GO SITE</span></a>
+                    </div>
+                    <div class="other-tit">
+                        <div class="prev-box">
+                            <a href="./../work3/" class="prev-btn" class="prev-site" title="prev-site">
+                                <span class="arrow prev-arrow"></span>
+                                <span class="tit-txt">ACCESSORIES SHOP 메인페이지 구축</span>
+                            </a>
+                            
+                        </div>
+                        <div class="next-box">
+                            <a href="./../work1/" class="next-btn" class="next-site" title="next-site">
+                                <span class="tit-txt">LOTTE CASTLE SITE 보완하기</span>
+                                <span class="arrow next-arrow"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section1 end -->        
+        <!-- section2 start -->        
+        <section id="section2">
+            <div class="bg-box"></div>
+            <div class="content-box">
+                <ul>
+                    <li class="tablet-box">
+                        <div class="frame-box">
+                            <img src="./../img/ta_mockup.png" alt="tablet-frame" class="frame tablet-frame">
+                        </div>
+                    </li>
+                    <li class="pc-box">
+                        <div class="frame-box">
+                            <img src="./../img/pc_mockup.png" alt="pc-frame" class="frame pc-frame">
+                        </div>
+                    </li>
+                    <li class="mobile-box">
+                        <div class="frame-box">
+                            <img src="./../img/mo_mockup.png" alt="moblie-frame" class="frame mobile-frame">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- section2 end -->        
+        <!-- section3 start -->        
+        <section id="section3">
+            <div class="gap">
+                <div class="container">
+                    <div class="list list0">
+                        <h3 class="list-tit kr">구분</h3>
+                        <p class="list-txt wh-kr">반응형 웹 : 퍼블리싱 100%</p>
+                    </div>
+                    <div class="list list1">
+                        <h3 class="list-tit kr">제작영역</h3>
+                        <p class="list-txt wh-kr">메인페이지, 메뉴</p>
+                    </div>
+                    <div class="list list2">
+                        <h3 class="list-tit kr">스킬</h3>
+                        <p class="list-txt wh-kr">html, css, Js&jQuery</p>
+                    </div>
+                    <div class="list list3">
+                        <h3 class="list-tit kr">주요설명</h3>
+                        <p class="list-txt wh-kr">제네시스 메인페이지 기능을 모두 구현하고자하였습니다. 총 섹션9개로 이루어져있으며 슬라이드의 경우 자동재생을 멈추고 다시 재생가능하도록 만들었습니다. 또한, 반응형 페이지로 모바일과 데스크탑에서 다른 슬라이드방법을 이용하였습니다.</p>
+                        <p class="list-txt wh-kr">두 번째 섹션에서 기존의 동영상을 삽입하는 대신 css와 jQuery를 이용하여 회전하는 정육면체를 넣어 차량의 여러 면을 볼 수 있도록 하였습니다. 푸터영역에서 배열슬라이드를 이용하여 계속해서 롤링되고 있는 공지사항을 만들었습니다. 푸터에서도 페이지이동이 편리하도록 사이트맵을 구현하였습니다. </p>
+                    </div>
+                    <div class="list list4">
+                        <h3 class="list-tit kr">주요컬러</h3>
+                        <div class="color-box">
+                            <div class="color color0"></div> <!-- #c3964e -->
+                            <div class="color color1"></div> <!-- #f1edea -->
+                            <div class="color color2"></div> <!-- #000 -->
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <h3 class="detail-tit kr">메인페이지</h3>
+                        <img src="" alt="pc-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main footer -->
+    <!-- footer start -->
+    <footer id="footer" class="white">
+        <div class="gap">
+            <div class="container">
+                <div class="copyright-box">
+                    <span>&copy; MINKYUNG KANG ALL RIGHTS RESERVED</span>
+                </div>
+                <div class="site-box">
+                    <div class="site-wrap">
+                        <div class="site-gap">
+                            <dl class="site">
+                                <dt class="hide">PORTFOLIO SITE</dt>
+                                <dd><a href="http://minkfree94.dothome.co.kr/portfolio_0/" target="blank" class="go-site" title="portfolio0">1st PORTFOLIO</a></dd>
+                                <dd><a href="http://minkfree94.dothome.co.kr/portfolio_1/" target="blank" class="go-site" title="portfolio1">2nd PORTFOLIO</a></dd>
+                                <dd><a href="http://minkfree94.dothome.co.kr/portfolio_2/" target="blank" class="go-site" title="portfolio2">3rd PORTFOLIO</a></dd>
+                                <dd><a href="http://minkfree94.dothome.co.kr/portfolio_3/" target="blank" class="go-site" title="portfolio3">4th PORTFOLIO</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="site-btn-wrap">
+                        <a href="javascript:" class="site-btn">
+                            <span>PORTFOLIO SITE</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- page move -->
+    <div id="goTop">
+        <a href="javascript:" class="go-top-btn"><span>TOP</span></a>
+    </div>
+</div>
 <script src="./js/work2.js"></script>
 <script src="./../../js/common_profile.js"></script>
 </body>

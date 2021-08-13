@@ -1,5 +1,5 @@
 ;(function($){
-    var work0 = {
+    var work1 = {
         init:function(){
             var that = this;
                 that.section2Fn();
@@ -22,5 +22,5 @@
         }
     }
 
-    work0.init();
+    work1.init();
 })(jQuery);
