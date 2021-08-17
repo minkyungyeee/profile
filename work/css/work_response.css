@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+@media all and (max-width:1700px){
+    .gap {max-width:100%;padding:0 10%;box-sizing: border-box;}
+}
+
+@media all and (max-width:1200px){
+    .gap {padding:0 5%;}
+}
+
+@media all and (max-width:1024px){
+    #main #section1 .container {padding-top:50px;}
+    #main #section1 .container .main-tit h2 {font-size:50px;margin-right:20px;}
+    #main #section1 .container .main-tit span {font-size:24px;}
+    #main #section1 .container .main-tit a.site-link {width:120px;height:40px;}
+    #main #section1 .container .main-tit a.site-link span {font-size:18px;line-height:40px;}
+    #main #section1 .container .other-tit {margin-bottom:0;}
+    #main #section1 .container .other-tit > div a span.arrow {display:inline-block;width:15px;height:15px;}
+
+    /* section2 */
+    #main #section2 .gap .container .list {margin:32px 0;}
+    #main #section2 .gap .container .list h3.list-tit {width:100px;font-size:18px;}
+    #main #section2 .gap .container .list p.list-txt {font-size:18px;line-height:140%;}
+    #main #section2 .gap .container .list .color-box {margin-top:32px;}
+    #main #section2 .gap .container .list .color-box .color {width:55px;height:55px;margin-right:20px;}
+
+    #main #section2 .gap .container .detail-box h3.detail-tit {font-size:18px;margin-bottom:30px;}
+}
+
+@media all and (max-width:770px){
+    /* section1 */
+    #main #section1 .container .main-tit h2 {font-size:40px;margin-right:15px;}
+    #main #section1 .container .main-tit span {font-size:20px;}
+    #main #section1 .container .main-tit a.site-link {width:100px;height:35px;}
+    #main #section1 .container .main-tit a.site-link span {font-size:15px;line-height:35px;}
+    #main #section1 .container .other-tit > div a span.arrow {width:12px;height:12px;}
+    #main #section1 .container .other-tit > div a span.tit-txt {font-size:16px;}
+
+    /* section2 */
+    #main #section2 .bg-box {margin-bottom:70px;height:400px;}
+    #main #section2 .gap .container .list {margin:25px 0;}
+    #main #section2 .gap .container .list h3.list-tit {font-size:16px;}
+    #main #section2 .gap .container .list p.list-txt {font-size:16px;}
+    #main #section2 .gap .container .list .color-box {margin-top:25px;}
+
+    #main #section2 .gap .container .detail-box h3.detail-tit {font-size:16px;margin-bottom:30px;}
+}
+
+@media all and (max-width:660px){
+    #main #section1 .container .other-tit {flex-direction: column;}
+    #main #section1 .container .other-tit > div {padding:7px 0;}
+    #main #section1 .container .other-tit > div a {display:block;}
+    #main #section1 .container .other-tit > div.next-box a {text-align:right;}
+}
+
+@media all and (max-width:580px){
+    /* section1 */
+    #main #section1 {padding-bottom:30px;}
+    #main #section1 .container .main-tit {margin-bottom:30px;}
+    #main #section1 .container .main-tit h2 {font-size:30px;margin-right:10px;}
+    #main #section1 .container .main-tit span {font-size:16px;}
+    #main #section1 .container .main-tit a.site-link {width:80px;height:28px;}
+    #main #section1 .container .main-tit a.site-link span {font-size:12px;line-height:28px;}
+
+    #main #section1 .container .other-tit > div a span.arrow {width:10px;height:10px;}
+    #main #section1 .container .other-tit > div a span.tit-txt {font-size:13px;}
+
+
+    /* section2 */
+    #main #section2 .bg-box {margin-bottom:50px;height:300px;}
+    #main #section2 .gap .container .list {margin:15px 0;}
+    #main #section2 .gap .container .list h3.list-tit {width:70px;font-size:14px;}
+    #main #section2 .gap .container .list p.list-txt {font-size:13px;}
+    #main #section2 .gap .container .list .color-box {margin-top:15px;}
+
+    #main #section2 .gap .container .detail-box h3.detail-tit {font-size:14px;margin-bottom:15px;}
+}
+
+@media all and (max-width:410px){
+    /* section2 */
+    #main #section2 .bg-box {margin-bottom:40px;height:200px;}
+    #main #section2 .gap .container .list h3.list-tit {display:block;width:100%;margin-bottom:15px;}
+    #main #section2 .gap .container .list3 p.list-txt:nth-of-type(1) {margin-top:0;}
+    #main #section2 .gap .container .list3 p.list-txt:nth-of-type(2) {margin-top:15px;}
+}

@@ -5,8 +5,8 @@
 #main #section1 .container {padding-top:80px;}
 #main #section1 .container .main-tit {position:relative;margin-bottom:40px;}
 #main #section1 .container .main-tit h2 {display:inline-block;font-size:72px;font-weight:600;letter-spacing: 2px;color:#ffb400;margin-right:30px;}
-#main #section1 .container .main-tit span {font-size:28px;}
-#main #section1 .container .main-tit a.site-link {position:absolute;right:0;top:50%;transform:translateY(-50%);width:150px;height:45px;border:2px solid #ffb400;color:#1e1e1e;text-align:center;border-radius: 3px;transition: all .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);background-repeat: no-repeat;background-image: linear-gradient(135deg, #ffb400 0%, #ffb400 50%, transparent 50.1%);background-size: 0% 100%;}
+#main #section1 .container .main-tit span {display:inline-block;font-size:28px;line-height:140%;}
+#main #section1 .container .main-tit a.site-link {float:right;width:150px;height:45px;border:2px solid #ffb400;color:#1e1e1e;text-align:center;border-radius: 3px;transition: all .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);background-repeat: no-repeat;background-image: linear-gradient(135deg, #ffb400 0%, #ffb400 50%, transparent 50.1%);background-size: 0% 100%;}
 #main #section1 .container .main-tit a.site-link:hover {background-size: 240% 100%;color:#fff;}
 #main #section1 .container .main-tit a.site-link span {color:inherit;font-size:20px;line-height:45px;letter-spacing: 2px;}
 
@@ -20,31 +20,17 @@
 
 
 /* section2 */
-#main #section2 {position:relative;height:800px;padding-bottom:50px;}
-#main #section2 .content-box {z-index:2;position:absolute;top:0;left:0;width:100%;height:100%;}
-#main #section2 .content-box ul {width:100%;height:100%;}
-#main #section2 .content-box ul li {position:absolute;top:0;height:100%;}
-#main #section2 .content-box ul li.tablet-box {z-index:2;width:35%;left:20%;transform:translateX(-50%);}
-#main #section2 .content-box ul li.pc-box {z-index:1;width:50%;left:50%;transform:translateX(-50%);}
-#main #section2 .content-box ul li.mobile-box {z-index:2;width:30%;left:75%;transform:translateX(-50%);}
+#main #section2 {position:relative;padding-bottom:50px;}
+#main #section2 .bg-box {position:relative;margin-bottom:100px;width:100%;height:600px;}
+#main #section2 .gap .container .list {margin:40px 0;}
+#main #section2 .gap .container .list h3.list-tit {display:inline-block;width:120px;color:#ffb400;font-size:22px;font-weight:500;}
+#main #section2 .gap .container .list3 h3.list-tit,
+#main #section2 .gap .container .list4 h3.list-tit {display:block;width:100%;}
+#main #section2 .gap .container .list p.list-txt {display:inline-block;width:80%;font-size:20px;line-height:140%;}
+#main #section2 .gap .container .list3 p.list-txt {width:100%;margin-top:20px;line-height:150%;}
+#main #section2 .gap .container .list .color-box {margin-top:40px;}
+#main #section2 .gap .container .list .color-box .color {display:inline-block;width:70px;height:70px;border-radius:50%;margin-right:20px;}
 
-#main #section2 .content-box ul li .frame-box {z-index:2;position:relative;width:100%;padding-top:150px;}
-#main #section2 .content-box ul li.pc-box .frame-box {padding-top:0;}
-#main #section2 .content-box ul li.mobile-box .frame-box {padding-top:250px;}
-#main #section2 .content-box ul li .frame-box img {display:block;width:100%;}
+#main #section2 .gap .container .detail-box h3.detail-tit {color:#ffb400;font-size:22px;font-weight:500;margin-bottom:40px;}
+#main #section2 .gap .container .detail-box img {display:block;width:70%;margin:0 auto;}
 
-/* section3 */
-#main #section3 {padding-bottom:50px;}
-#main #section3 .gap .container {}
-#main #section3 .gap .container .list {margin:40px 0;}
-#main #section3 .gap .container .list h3.list-tit {display:inline-block;width:120px;color:#ffb400;font-size:22px;font-weight:500;}
-#main #section3 .gap .container .list3 h3.list-tit,
-#main #section3 .gap .container .list4 h3.list-tit {display:block;width:100%;}
-#main #section3 .gap .container .list p.list-txt {display:inline-block;width:80%;font-size:20px;line-height:140%;}
-#main #section3 .gap .container .list3 p.list-txt {width:100%;margin-top:20px;line-height:150%;}
-#main #section3 .gap .container .list .color-box {margin-top:40px;}
-#main #section3 .gap .container .list .color-box .color {display:inline-block;width:70px;height:70px;border-radius:50%;margin-right:20px;}
-
-#main #section3 .gap .container .detail-box {}
-#main #section3 .gap .container .detail-box h3.detail-tit {color:#ffb400;font-size:22px;font-weight:500;margin-bottom:40px;}
-#main #section3 .gap .container .detail-box img {display:block;width:70%;margin:0 auto;}

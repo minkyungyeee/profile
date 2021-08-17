@@ -1,9 +1,8 @@
 @charset "UTF-8";
-#main #section2 .bg-box {z-index:1;position:relative;top:60px;width:100%;height:600px;background:url(../img/202010150350323250.jpg) no-repeat 50% 50%;background-size:cover;}
+#main #section2 .bg-box {/* position:relative;margin-bottom:100px;width:100%;height:600px; */background:url(../img/202010150350323250.jpg) no-repeat 50% 50%;background-size:cover;}
 #main #section2 .bg-box::after {content:'';display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:#000;opacity:.4;}
 
-/* section3 */
-#main #section3 .gap .container .list .color-box .color0 {background:#8b2332;}
-#main #section3 .gap .container .list .color-box .color1 {background:#63232c;}
-#main #section3 .gap .container .list .color-box .color2 {background:#000;}
+#main #section2 .gap .container .list .color-box .color0 {background:#8b2332;}
+#main #section2 .gap .container .list .color-box .color1 {background:#63232c;}
+#main #section2 .gap .container .list .color-box .color2 {background:#000;}
 .sub-tit {margin-top:20px;}
